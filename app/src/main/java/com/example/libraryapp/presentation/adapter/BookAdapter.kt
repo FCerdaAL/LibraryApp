@@ -1,8 +1,10 @@
 package com.example.libraryapp.presentation.adapter
 
 import android.content.res.ColorStateList
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -40,6 +42,7 @@ class BookAdapter(
             }
         }
 
+        @RequiresApi(Build.VERSION_CODES.M)
         fun bind(book: Book) {
             binding.apply {
                 titleText.text = book.title

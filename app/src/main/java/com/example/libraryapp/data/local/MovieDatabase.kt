@@ -2,9 +2,7 @@ package com.example.libraryapp.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.libraryapp.data.local.entities.MovieEntity
 
 @Database(entities = [MovieEntity::class], version = 1, exportSchema = false)
-abstract class MovieDatabase : RoomDatabase() {
     abstract fun movieDao(): MovieDao
 }
